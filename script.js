@@ -1,7 +1,24 @@
 
-var nome = prompt("Qual seu nome?")
-var idade = Number(prompt("Qual é sua idade?"))
+var area = document.getElementById('area')
 
 
-document.write("<h1>Bem vindo " + nome + ", você tem " + idade + " anos de idade" +  
-"</h1>")
+function entrar() {
+   var nome = prompt("Digite seu nome"); 
+
+   if(nome === '' || nome === null) {
+    alert("Ops, algo deu errado")
+    area.innerHTML = "Clique no botão para acessar..."
+   } else {
+      area.innerHTML = "Bem vindo " + nome + " "; 
+
+      let botaoSair = document.createElement("button");
+      botaoSair.innerText = "Sair da conta"; 
+      botaoSair.onclick = sair; 
+      area.appendChild(botaoSair);
+   }
+}
+
+function sair() {
+   alert("Até mais!"); 
+   area.innerHTML = "Você saiu!"
+}
