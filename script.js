@@ -1,7 +1,9 @@
 
+// Cria variável para guardar valores/ declarar valores. 
 var area = document.getElementById('area')
 
 // Aprendendo sobre Funções com JS
+// Função entrar 
 function entrar() {
    var nome = prompt("Digite seu nome"); 
 
@@ -18,6 +20,7 @@ function entrar() {
    }
 }
 
+// Função sair 
 function sair() {
    alert("Até mais!"); 
    area.innerHTML = "Você saiu!"
